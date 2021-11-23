@@ -1,0 +1,29 @@
+{
+  "name": "PruebaTata",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MigueLopezAG/PruebaTata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MigueLopezAG/PruebaTata/issues"
+  },
+  "homepage": "https://github.com/MigueLopezAG/PruebaTata#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0"
+  }
+}
