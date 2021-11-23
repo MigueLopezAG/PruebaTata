@@ -1,6 +1,7 @@
 const route = require('express').Route();
 
 route.use('/weather', require('./weatherController').default);
+route.use('/event', require('./eventController').default);
 
 route.use(function(err, req, res, next) {
     if (err.name === 'ValidationError') {

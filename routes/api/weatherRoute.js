@@ -1,6 +1,6 @@
 const router = require('express').Router();
 import { getWeather } from '../../controllers/weatherController';
 
-router.get('/', getWeather);
+router.get('/:location', getWeather);
 
 export default router;

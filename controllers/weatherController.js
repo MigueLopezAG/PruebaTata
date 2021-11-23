@@ -6,7 +6,7 @@ export async function getWeather(req, res){
     const location = req.query.location
     const weatherApi = rapidapiUrl.replace('LOCATION', "Mexico");
     fetch(weatherApi, {
-        method: 'GET', // or 'PUT'
+        method: 'GET',
     }).then( res => {
           return res.json();
     }).catch(error => res.send(422).send({ error: error }))
