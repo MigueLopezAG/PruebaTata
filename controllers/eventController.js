@@ -1,8 +1,9 @@
 
 import { EventEmitter } from 'events';
-
+//we create the event
 let MyEvent = new EventEmitter();
 
+//we define the function of the event when its called
 MyEvent.on('newEvent', (num1, num2)=>{
     try{
         const auxN1=num1, auxN2=num2, total = 0;
@@ -16,13 +17,14 @@ MyEvent.on('newEvent', (num1, num2)=>{
             auxN1+=num1;
             auxN2+=num2; 
         };
-        console.log("Multiplies of", num1, num2, (total+1000))
+        console.log("Multiplies of", num1, num2, (total+1000));
     }catch (err){
         console.log("Hubo un error en la ejecución", err)
     }
     
 });
 
+//define the function that its going to emit the event
 export function logInfo(req){
     const input = req.body.input
     var nums = input.split(' ');
