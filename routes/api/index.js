@@ -1,9 +1,15 @@
-const route = require('express').Route();
+import {Router} from 'express'
+import weatherRoute from './weatherRoute.js'
+import  eventRouter from './eventRoute.js'
+import  userRouter from './userRoute.js'
 
-route.use('/weather', require('./weatherController').default);
-route.use('/event', require('./eventController').default);
+const route = Router();
 
-route.use(function(err, req, res, next) {
+route.use('/weather', weatherRoute);
+route.use('/event', eventRouter);
+route.use('/user', userRouter);
+
+route.use(function(err, res, next) {
     if (err.name === 'ValidationError') {
         res.status(422).json({
             errors: Object.keys(err.errors).reduce(function(errors, key) {

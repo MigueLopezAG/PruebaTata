@@ -1,8 +1,9 @@
 import fetch from 'node-fetch';
-import { rapidapiUrl } from '../config';
+import rapidapiUrl from '../config/index.js';
 
 
 export async function getWeather(req, res){
+
     const location = req.query.location
     const weatherApi = rapidapiUrl.replace('LOCATION', "Mexico");
     fetch(weatherApi, {

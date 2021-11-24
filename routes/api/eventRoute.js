@@ -1,6 +1,8 @@
-const router = require('express').Router();
-import { logInfo } from '../../controllers/eventController';
+import {Router} from 'express'
+import { logInfo } from '../../controllers/eventController.js';
 
-router.get('/', logInfo);
+const route = Router(); 
 
-export default router;
+route.get('/', logInfo);
+
+export default route;

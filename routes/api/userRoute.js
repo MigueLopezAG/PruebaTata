@@ -1,9 +1,10 @@
-const router = require('express').Router();
-import { get, getAll, postUser, updateUser} from '../../controllers/userController';
+import { Router } from 'express'
+import { get, postUser, updateUser} from '../../controllers/userController.js';
 
-router.get('/view', getAll);
-router.get('/view/:id', get);
-router.post('/add', postUser);
-router.patch('/edit/:id', updateUser)
+const route = Router();
 
-export default router;
+route.get('/view/:id', get);
+route.post('/add', postUser);
+route.patch('/edit/:id', updateUser)
+
+export default route;
